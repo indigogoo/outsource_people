@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518115015) do
+ActiveRecord::Schema.define(version: 20140520130348) do
+
+  create_table "banners", force: true do |t|
+    t.string   "name"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "banner_image_file_name"
+    t.string   "banner_image_content_type"
+    t.integer  "banner_image_file_size"
+    t.datetime "banner_image_updated_at"
+  end
 
   create_table "speakers", force: true do |t|
     t.string   "first_name"

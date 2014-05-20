@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   
+  
+
   root 'welcome#index'
   
   # admin area
-  get "/admin" => "admin/speakers#index"
-    namespace :admin do
-      resources :speakers
+  
+  namespace :admin do
+      resources :speakers, :banners
   end
+
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

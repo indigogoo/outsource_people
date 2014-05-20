@@ -52,7 +52,6 @@ class Admin::SpeakersController < Admin::ApplicationController
                                         :speech_description,
                                         :speech_time,
                                         :speech_day,
-                                        :image_url,
                                         :status,
                                         :avatar)
       end

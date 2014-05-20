@@ -9,7 +9,7 @@
     <th colspan="3"></th>
   </tr>
  
-<% @speakers.each do |speaker| %>
+<% @speakers.each_with_index do |speaker, i| %>
   <tr>
     <td><%= speaker.first_name %> <%= speaker.last_name %></td>
     <td><%= speaker.speech_title %></td>
@@ -20,5 +20,14 @@
     <td><%= link_to 'Destroy', admin_speaker_path(speaker),
                     method: :delete %></td>
   </tr>
+  <% if i < 20 %>
+    <% if (i + 1) % 4 == 0 %>
+      <tr> <td>-------</td></tr>
+    <% end %>
+  <% else %>
+    <% if i == 25 %>
+      <tr> <td>-------</td></tr>
+    <% end %>
+  <% end %>
 <% end %>
 </table>
