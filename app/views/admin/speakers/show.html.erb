@@ -1,0 +1,40 @@
+<p>
+  <strong>Name:</strong>
+  <%= @speaker.first_name %>
+  <%= @speaker.last_name %>
+</p>
+ 
+<p>
+  <strong>Company:</strong>
+  <%= @speaker.company %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @speaker.position %>
+</p>
+
+<p>
+  <strong>Speaker Description:</strong>
+  <%= @speaker.speaker_description %>
+</p>
+
+<p>
+  <strong>Speech Title:</strong>
+  <%= @speaker.speech_title %>
+</p>
+
+<p>
+  <strong>Speech Description:</strong>
+  <%= @speaker.speech_description %>
+</p>
+
+<p>
+  <strong>Speech Time:</strong>
+  <%= @speaker.speech_time %>
+</p>
+ 
+
+ 
+<%= link_to 'Edit Speaker', edit_admin_speaker_path(@speaker) %> |
+<%= link_to 'Back to Speakers', admin_speakers_path %>
