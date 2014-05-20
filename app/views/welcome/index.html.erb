@@ -1,7 +1,7 @@
     <div id="header_main">
 		<div id="header">
 			<div class="outsourse_people">
-				<a href="#"><img src="/assets/outsorsing_people.png"></a>
+				<a href="#"><%= image_tag "outsorsing_people.png" %></a>
 			</div>
 			<ul class="mainMenu">
 				<li ><span rel="#to_block1" class="program">Программа</span></li>
@@ -21,9 +21,9 @@
 	<div id="wrapper">   
 	   
 	   <div id="poster"> 
-			<img class="first" src="/assets/image_1.png">
+	   	<%= image_tag("image_1.png", :class => "first") %>
 			<div class="poster_text_top">
-				<img  src="/assets/image_2.png">
+				<%= image_tag "image_2.png" %>
 				<span>С 09.06.2014 по 16.06.2014</span><br>
 			</div>
 			<div class="poster_text_bott"> 
@@ -36,27 +36,27 @@
 	   <div id="inform">
 			<div id="inform_left">
 				<div id="information">
-					<img  src="/assets/images001.png">
+					<%= image_tag "images001.png" %>
 				</div>
 				<div id="people">
 					<div class="people" style="margin-left:0">
-						<img src="/assets/flag_us.png" class="flag">
-						<img src="/assets/pr.jpg" class="imgpeople">
+						<%= image_tag("flag_us.png", :class => "flag") %>
+						<%= image_tag("img_form_registr.png", :class => "imgpeople") %>
 						<p>Спикер</p>
 					</div>
 					<div class="people">
-						<img src="/assets/flag_ua.jpg" class="flag">
-						<img src="/assets/pr.jpg" class="imgpeople">
+						<%= image_tag("flag_ua.jpg", :class => "flag") %>
+						<%= image_tag("img_form_registr.png", :class => "imgpeople") %>
 						<p>Спикер</p>
 					</div>
 					<div class="people">
-						<img src="/assets/flag_uk.png" class="flag">
-						<img src="/assets/pr.jpg" class="imgpeople">
+						<%= image_tag("flag_uk.png", :class => "flag") %>
+						<%= image_tag("img_form_registr.png", :class => "imgpeople") %>
 						<p>Спикер</p>
 					</div>
 					<div class="people">
-						<img src="/assets/flag_pl.png" class="flag">
-						<img src="/assets/pr.jpg" class="imgpeople">
+						<%= image_tag("flag_pl.png", :class => "flag") %>
+						<%= image_tag("img_form_registr.png", :class => "imgpeople") %>
 						<p>Спикер</p>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 			</div>
 			
 			<div class="registr_form">
-				<img class="first" src="/assets/img_form_registr.png">
+				<%= image_tag "img_form_registr.png" %>
 				<form class="forma" name="" method="post" enctype="multipart/form-data">
                    <div><input type="text"  size="30" name="name" maxlength="20" placeholder="Имя" class="input_name"></div>
                    <div><input type="text"  size="30" name="email" maxlength="20" placeholder="Email" class="input_email"></div>
@@ -118,7 +118,7 @@
 	</div>
 	
 	<div id="sponsors">   
-	   <img  src="/assets/sponsors.png">
+	   <%= image_tag "sponsors.jpg" %>
    </div>
    
 
@@ -138,11 +138,11 @@
    <div id="block31">
 	      <h2>Если вы на этой странице, то сейчас вы находитесь в одной из 4 категорий в аутсорсинг бизнесе:</h2>
 	      <ul>
-		    <li><img src="/assets/block313.jpg"><p>Вы работаете в продажах или в маркетинге. Вы выполняете работу на достаточном уровне, но хочется действительно делать свою работу качественно и приносить ощутимую пользу своей компании.</p><div class="clear"></div></li>
+		    <li><%= image_tag "block313.jpg" %><p>Вы работаете в продажах или в маркетинге. Вы выполняете работу на достаточном уровне, но хочется действительно делать свою работу качественно и приносить ощутимую пользу своей компании.</p><div class="clear"></div></li>
 	        
-	        <li><img src="/assets/block312.jpg"><p>Вы работаете как независимый профессионал-фрилансер, но вы уверены, что можно достигать большего не только все большим количествам часов работы, но и повышением навыков переговоров с заказчиком и правильным личным маркетингом.</p><div class="clear"></div></li>
-	        <li><img src="/assets/block311.jpg"><p>У вас уже есть свой бизнес, однако он до сих пор не запущен на полную мощность. Вам необходимо усилить продажи, потому что, того, что у вас есть сейчас вам явно не хватает. В вашей компании есть несколько сотрудников, и вам явно хочется большего.	</p><div class="clear"></div></li>
-	        <li><img src="/assets/block314.jpg"><p>Вы уже солидный владелец компании, и вы добились успехов. На протяжении своей карьеры, вы часто оказывались в ситуации, когда всего лишь 1 маленький штрих менял ваш бизнес с ног на голову и позволял выйти на ещё более высокий уровень доходов. Теперь, вы снова в поиске таких штрихов, чтобы покорить новые финансовые высоты в своём деле!</p><div class="clear"></div></li>
+	        <li><%= image_tag "block312.jpg" %><p>Вы работаете как независимый профессионал-фрилансер, но вы уверены, что можно достигать большего не только все большим количествам часов работы, но и повышением навыков переговоров с заказчиком и правильным личным маркетингом.</p><div class="clear"></div></li>
+	        <li><%= image_tag "block311.jpg" %><p>У вас уже есть свой бизнес, однако он до сих пор не запущен на полную мощность. Вам необходимо усилить продажи, потому что, того, что у вас есть сейчас вам явно не хватает. В вашей компании есть несколько сотрудников, и вам явно хочется большего.	</p><div class="clear"></div></li>
+	        <li><%= image_tag "block314.jpg" %><p>Вы уже солидный владелец компании, и вы добились успехов. На протяжении своей карьеры, вы часто оказывались в ситуации, когда всего лишь 1 маленький штрих менял ваш бизнес с ног на голову и позволял выйти на ещё более высокий уровень доходов. Теперь, вы снова в поиске таких штрихов, чтобы покорить новые финансовые высоты в своём деле!</p><div class="clear"></div></li>
 	      </ul>
 	    </div>
 
@@ -208,7 +208,7 @@
 				</div>
 				<div class="clear"></div>
 				<div class="closeBlock">
-					<img src="/assets/batton_closeBlock.png"> 
+					<%= image_tag "batton_closeBlock.png" %> 
 				</div>
 			</div>
 		<% end %>
@@ -219,7 +219,7 @@
 		    <div class="ref">
 		   	   <div class="ref1"></div>
 		   	   <div class="ref2">
-		   	      <img src="/assets/people3.jpg">
+		   	      <%= image_tag "people3.jpg" %>
 		   	   	  <p>
 		   	   	  			    На фоні загального депресняку, що охопив країну через футбольні та геополітичні негаразди, айтішники виглядають повними неадекватами - світовий ринок ІТ росте шаленими темпами і єдине питання в тому, хто відкриє рота ширше і відкусить від нього шмат побільше. Обідня перерва на Outsourcing People in Kharkiv в черговий раз засвідчила, що Україна таки має таланти і все у нас буде добре ;).  
 		   	   	  </p>
@@ -277,10 +277,10 @@
             </p><p>На конференции такого уровня приезжают очень много звёзд аутсорсинг бизнеса, которые доминируют самые различные ниши. Одно общение с ними позитивно скажется на вашем прогрессе, плюс, вполне возможно, вы сможете договориться о выгодном партнёрстве с людьми в зале и совместно выстроить сотрудничество. </p>
             <p>Это происходит постоянно на каждой нашей конференции. </p>
           </td>
-          <td class="td_img"><img src="/assets/cause2.jpg"></td>
+          <td class="td_img"><%= image_tag "cause2.jpg" %></td>
         </tr>
         <tr>
-          <td class="td_img"><img src="/assets/cause3.jpg"></td>
+          <td class="td_img"><%= image_tag "cause3.jpg" %></td>
           <td>
             <p><span class="special">3.  Неформальное общение во время вкусного обеда и на кофебрейках</span></p>
             <p>Одно дело - слушать специалистов во время докладов или читать про них на информационных сайтах. Другое дело - находиться с ними на расстоянии вытянутой руки и получать от них самую свежую информацию во время конференци.</p>
@@ -293,10 +293,10 @@
             <p>Даже просто оставаясь на месте, скорей всего вы будете расти. Представьте, сколько новых идей вы сможете воплотить для расширения своего бизнеса, вооружившись информацией и энергией с конференции.</p>
             <p>Представьте, каких результатов вы достигнуте за год. Конференция  проводится нами в конце года специально, чтобы после нее вы смогли в следующем году применить как можно больше данных!</p>
           </td>
-          <td class="td_img"><img src="/assets/cause4.jpg"></td>
+          <td class="td_img"><%= image_tag "cause4.jpg" %></td>
         </tr>
         <tr>
-          <td class="td_img"><img src="/assets/cause5.jpg"></td>
+          <td class="td_img"><%= image_tag "cause5.jpg" %></td>
           <td>
             <p><span class="special">5.  Инвестиции в себя и своих сотрудников</span></p>
             <p>Часто бывает сложно уделить время в пылу текучки тактике и стратегии.<br>Вы выделите специальное время, которое безотрывно посвятите, возможно, самому важному для вашего дальнейшего развития. Все в одном месте и будет дано в сжатый промежуток.</p>
