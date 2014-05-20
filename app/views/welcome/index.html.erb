@@ -118,7 +118,7 @@
 	</div>
 	
 	<div id="sponsors">   
-	   <%= image_tag "sponsors.jpg" %>
+	   <%= image_tag "sponsors.png" %>
    </div>
    
 
@@ -159,7 +159,7 @@
     <% @days.each_with_index do |d,k| %> 
 
 	        <div class="program_date">
-				<img src="/assets/image_3.png"> 
+			    <%= image_tag "image_3" %>
 				<p><%= d.day.to_s %> июня, <%= @days_of_week[k] %></p>
 			</div>
 			<div id="program1">
@@ -230,7 +230,7 @@
 		<% end %>
 		<% if k == 5 %>
 		    <div class="poster_afterparty">
-			  <img src="/assets/afterparty.png"> 
+			  <%= image_tag "afterparty.jpg" %>
 		    </div>
 		<% end %>
 		
