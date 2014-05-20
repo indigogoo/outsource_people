@@ -7,7 +7,7 @@ gem 'rails', '4.1.0'
 gem 'sqlite3'
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+#gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
