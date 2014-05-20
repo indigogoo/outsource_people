@@ -20,6 +20,11 @@ gem 'pry-nav'
 gem 'pry-remote'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
 gem 'simple_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
