@@ -39,7 +39,7 @@ class Admin::BannersController < Admin::ApplicationController
   # PATCH/PUT /banners/1.json
   def update
     @banner = Banner.find params[:id]
-    if @banner.update speaker_params
+    if @banner.update banner_params
       redirect_to admin_banners_path
     else
       render :action => :edit
@@ -62,6 +62,8 @@ class Admin::BannersController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def banner_params
-      params.require(:banner).permit(:name, :position, :banner_image)
+      params.require(:banner).permit(:name,  
+                                     :banner_image,
+                                     :url)
     end
 end

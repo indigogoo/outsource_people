@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   
+  get 'en' => 'welcome#index_en'
+
   # admin area
   
   namespace :admin do

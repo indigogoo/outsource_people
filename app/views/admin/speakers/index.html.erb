@@ -1,11 +1,12 @@
 <h1>Listing Speakers</h1>
 <%= link_to 'New speaker', new_admin_speaker_path %>
-<table style="width:100%">
+<table style="width:100%; margin:20px">
   <tr>
     <th>Name</th>
     <th>Speach Title</th>
     <th>Day</th>
     <th>Time of speech</th>
+    <th>Top speaker</th>
     <th colspan="3"></th>
   </tr>
  
@@ -15,6 +16,11 @@
     <td><%= speaker.speech_title %></td>
     <td><%= speaker.speech_day %></td>
     <td><%= speaker.speech_time %></td>
+    <% if speaker.top == true %>
+      <td>yes</td>
+    <% else %>
+      <td>---</td>
+    <% end %>
     <td><%= link_to 'Show', admin_speaker_path(speaker) %></td>
     <td><%= link_to 'Edit', edit_admin_speaker_path(speaker) %></td>
     <td><%= link_to 'Destroy', admin_speaker_path(speaker),

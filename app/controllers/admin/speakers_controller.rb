@@ -43,16 +43,22 @@ class Admin::SpeakersController < Admin::ApplicationController
 
   private
       def speaker_params
-        params.require(:speaker).permit(:first_name, 
+        params.require(:speaker).permit(:first_name,
+                                        :first_name_en, 
                                         :last_name, 
+                                        :last_name_en,
                                         :company, 
                                         :position, 
                                         :speaker_description,
+                                        :speaker_description_en,
                                         :speech_title,
+                                        :speech_title_en,
                                         :speech_description,
+                                        :speech_description_en,
                                         :speech_time,
                                         :speech_day,
                                         :status,
-                                        :avatar)
+                                        :avatar,
+                                        :top)
       end
 end

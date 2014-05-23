@@ -1,23 +1,42 @@
 <%= simple_form_for [:admin, @speaker] do |f| %>
-  
-  
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
+    <table>
+      <tr>
+        <td class="speaker_form"><%= f.input :first_name %></td>
+        <td class="speaker_form"><%= f.input :first_name_en %></td>
+      </tr>
+      <tr>
+        <td class="speaker_form"><%= f.input :last_name %></td>
+        <td class="speaker_form"><%= f.input :last_name_en %></td>
+      </tr>
+    </table>
     <%= f.input :company %>
     <%= f.input :position %>
-    <%= f.input :speaker_description %>
-    <%= f.input :speech_title %>
-    <%= f.input :speech_description %>
+    <table>
+      <tr>
+        <td class="speaker_form"><%= f.input :speaker_description %></td>
+        <td class="speaker_form"><%= f.input :speaker_description_en %></td>
+      </tr>
+      <tr>
+        <td class="speaker_form"><%= f.input :speech_title %></td>
+        <td class="speaker_form"><%= f.input :speech_title_en %></td>
+      </tr>
+      <tr>
+        <td class="speaker_form"><%= f.input :speech_description %></td>
+        <td class="speaker_form"><%= f.input :speech_description_en %></td>
+      </tr>
+    </table>
     <%= f.input :speech_day %>
-    <%= f.input :speech_time,  collection: ["15:00 - 15:40", "15:40 - 16:20", "19:00 - 19:40", "19:40 - 20:20", "-------", "12:00 - 12:40"], selected: @speaker.speech_time %>
+    <%= f.input :speech_time,  collection: ["15:00 - 15:40", "15:40 - 16:20", "19:00 - 19:40", "19:40 - 20:20", "12:00 - 12:40", "12:40 - 13:20", "13:20 - 14:00", "14:30 - 15:10", "15:10 - 15:50", "15:50 - 16:30"], selected: @speaker.speech_time %>
     <%= f.input :status,  collection: ["International Speakers", "Sales and Marketing", "Speeches for CEO's", "PM, lawyers and HR"], selected: @speaker.status %>
     <%= f.input :avatar %>
-    <%= f.error :avatar_content_type %>
-    
+    <p><%= f.error :avatar_content_type %></p>
+    <%= f.label :top_speaker %>
+    <%= f.input_field :top, as: :boolean, boolean_style: :inline %>
+     
 
  
    
   
-    <%= f.button :submit %>
+    <p><%= f.button :submit %></p>
   
 <% end %>

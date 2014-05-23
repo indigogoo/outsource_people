@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520130348) do
+ActiveRecord::Schema.define(version: 20140522071446) do
 
   create_table "banners", force: true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140520130348) do
     t.string   "banner_image_content_type"
     t.integer  "banner_image_file_size"
     t.datetime "banner_image_updated_at"
+    t.string   "url"
   end
 
   create_table "speakers", force: true do |t|
@@ -42,6 +43,12 @@ ActiveRecord::Schema.define(version: 20140520130348) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.boolean  "top"
+    t.string   "first_name_en"
+    t.string   "last_name_en"
+    t.text     "speaker_description_en"
+    t.string   "speech_title_en"
+    t.text     "speech_description_en"
   end
 
   create_table "users", force: true do |t|
