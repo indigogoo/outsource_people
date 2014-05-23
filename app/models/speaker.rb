@@ -6,12 +6,8 @@ class Speaker < ActiveRecord::Base
     validates :first_name, :last_name, :first_name_en, :last_name_en, :company, :position, 
               :speaker_description, :speech_title, :speech_description, 
               :speaker_description_en, :speech_title_en, :speech_description_en, 
-              :speech_day, :speech_time, :image_url, presence: true
+              :speech_day, :speech_time, presence: true
     validates :status, presence: true
-    validates :avatar, :attachment_presence => true
-    validates_with AttachmentPresenceValidator, :attributes => :avatar
-    validates_attachment :avatar,
-    :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
 
 
     before_save :check_status_valid

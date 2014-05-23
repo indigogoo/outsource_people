@@ -5,6 +5,4 @@ class Banner < ActiveRecord::Base
     validates :name, :url, presence: true
     validates :banner_image, :attachment_presence => true
     validates_with AttachmentPresenceValidator, :attributes => :banner_image
-    validates_attachment :banner_image,
-    :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
 end

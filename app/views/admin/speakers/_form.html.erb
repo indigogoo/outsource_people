@@ -29,7 +29,7 @@
     <%= f.input :speech_time,  collection: ["15:00 - 15:40", "15:40 - 16:20", "19:00 - 19:40", "19:40 - 20:20", "12:00 - 12:40", "12:40 - 13:20", "13:20 - 14:00", "14:30 - 15:10", "15:10 - 15:50", "15:50 - 16:30"], selected: @speaker.speech_time %>
     <%= f.input :status,  collection: ["International Speakers", "Sales and Marketing", "Speeches for CEO's", "PM, lawyers and HR"], selected: @speaker.status %>
     <%= f.input :avatar %>
-    <p><%= f.error :avatar_content_type %></p>
+    <%= f.error :avatar_content_type %>
     <%= f.label :top_speaker %>
     <%= f.input_field :top, as: :boolean, boolean_style: :inline %>
      
