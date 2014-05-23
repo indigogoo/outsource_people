@@ -1,0 +1,441 @@
+    <div id="header_main">
+		<div id="header">
+			<div class="outsourse_people">
+				<a href="#"><%= image_tag "outsorsing_people.png" %></a>
+			</div>
+			<ul class="mainMenu">
+				<li><span rel="#to_block1" class="program">Program</span></li>
+				<li><span rel="#to_block2" class="price">Prices</span></li>
+				<li><span rel="#to_block3" class="registr"><b>Registration</b></span></li>
+				<li><span rel="#to_block4" class="contacts">Contacts</span></li>
+				<li><span rel="#to_block5" class="call">Partners</span></li>
+			</ul>
+		
+			<div class="telephone">
+				<span class="yellow_text"><b>Call!</b></span><br>
+				<span class="nomber">+38 063 702 3 703</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="wrapper">   
+	   
+	   <div id="poster"> 
+	   	<%= image_tag("image_1.png", :class => "first") %>
+			<div class="poster_text_top">
+				<%= image_tag "image_2.png" %>
+				<span>From 9.06.2014 to 16.06.2014</span><br>
+			</div>
+			<div class="poster_text_bott"> 
+				<p><span class="pervaya_yellow"><b>First</b></span> online conference</p><br>
+				<p>about outsourced business development </p>
+			</div>
+	   </div>
+	   
+	   
+	   <div id="inform">
+			<div id="inform_left">
+				<div id="information">
+					<%= image_tag "images001.png" %>
+				</div>
+				<div id="people">
+					<% @speakers.where(top: true).limit(4).each_with_index do |s| %>
+					  <% if s == 0 %>
+					  	<div class="people" style="margin-left:0">
+					  <% else %>
+					    <div class="people">
+					  <% end %>
+					      <%= image_tag("flag_ua.jpg", :class => "flag") %>
+						  <%= image_tag(s.avatar.url(:thumb), :class => "avatar") %>
+						  <p align="center"><%= s.first_name %> <%= s.last_name %> <br>
+						   <%=s.position%> &#64 <%=s.company%></p>
+					    </div>
+
+					  
+
+					<% end %>
+					
+				</div>
+			</div>
+			
+			<div id="inform_right">
+				<div id="companies">
+					
+					<div class="companies">
+						<p class="black">дней</p>
+					    <p class="blue">7</p>
+					</div>
+					<div class="companies">
+						<p class="black">компаний</p>
+					    <p class="blue">200</p>
+					</div>
+					<div class="companies">
+						<p class="black">докладa</p>
+					    <p class="blue">32</p>
+					</div>
+				</div>
+				<div id="timer">
+					<h2>До завершения регистрации: </h2>
+					<br><br>
+					<script type="text/javascript" src="http://timegenerator.ru/s/b0438343e8c099b1617713a03cbed157.js"></script>
+				</div>
+			</div>
+	   </div>
+	   
+	   
+	   </div>
+	  
+	   
+   </div>
+   
+	<div class="clear"></div>
+	
+
+
+    <div id="form_registr_main">
+    	<div id="to_block3"></div>
+		<div id="form_registr">
+			<div class="registr_text">
+				<p><span><b>Preregistration</b></span></p>
+			</div>
+			
+			
+			<div class="registr_form">
+				<%= image_tag "img_form_registr.png" %>
+				<form action="process.php" class="forma" name="" method="post" enctype="multipart/form-data">
+                   <div><input size="30" name="name" maxlength="20" placeholder="Name" class="input_name" type="text"></div>
+                   <div><input size="30" name="email" maxlength="20" placeholder="Email" class="input_email" type="text"></div>
+				   <div><input size="30" name="phone" maxlength="20" placeholder="Phone number" class="input_telephone" type="text"></div>
+				   <div><input value="Sign Up" size="30" maxlength="20" placeholder="Sign Up" class="submit" type="submit"></div>
+               </form>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div id="sponsors">   
+	   <%= image_tag "sponsors.png" %>
+   </div>
+   
+
+ 
+<div class="ps_text_box ps_text_box_1_1">
+	
+	 <iframe class="video_fr" src="//player.vimeo.com/video/81721441" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+   	  <div class="a_ref">Outsource People 2013 Kharkiv</div>
+</div>
+</div>
+
+
+
+
+	    <div id="block31">
+	      <h2>If you're reading this text that is mean that you're in one of four categories in the outsourcing business:</h2>
+	      <ul>
+		    <li><%= image_tag "block313.jpg" %><p>You work in sales 
+				or marketing. You do your job at a sufficient level, but you want to do 
+				your job better and bring tangible benefits to the company.</p><div class="clear"></div></li>
+	        
+	        <li><%= image_tag "block312.jpg" %><p>You are working
+				as an independent professional freelancer, but you are sure that you 
+				can achieve more, not only by increasing the number of hours, but by 
+				improving the skills of negotiation with the customer and correct 
+				personal marketing.</p><div class="clear"></div></li>
+	        <li><%= image_tag "block311.jpg" %><p>You already 
+					have your own business, but it's still not running at full capacity. You
+					 need to strengthen sales, because what you have now that's clearly not 
+					enough. Your company has several employees, and you obviously want more.</p><div class="clear"></div></li>
+	        <li><%= image_tag "block314.jpg" %><p>You are 
+					successful and solid company owner. Throughout the hole career, you have
+					 often been in a situation where only one smart step changed your 
+					business upside down and because of that your income rased to new level.
+					 You are searching again for some tips and new mechanism to reach new 
+					financial heights in the business!</p><div class="clear"></div></li>
+	      </ul>
+	    </div>
+
+	    <div class="ref">
+		   	   <div class="ref1"></div>
+		   	   <div class="ref2">
+		   	      <%= image_tag "insaart.png" %>
+		   	   	  <p>
+		   	   	  			  Outsource people 2013 was a great chance to meet new 
+people, share industry news and find out more about IT business trends 
+in Eastern Europe<br><br>
+		The conference brought together the leading experts of IT industry 
+from Eastern Europe to share the news and market trends of outsourcing 
+business world.
+		   	   	  </p>
+		   	   	  <div class="a_ref">Insaart<span> <a href="http://www.insart.ua/news/101-insart-team-at-outsource-people-2013" rel="nofollow">link to source</a></span></div>	
+		   	   </div>
+		   	   <div class="ref3"></div>
+		   </div>
+
+   <div id="programma">
+    	<div id="to_block1"></div>
+   
+   
+		<p class="text_pr">Program</p>
+		
+		
+		
+
+
+    <% @days.each_with_index do |d,k| %> 
+
+	        <div class="program_date">
+			    <%= image_tag "image_3.png" %>
+				<p><%= d.day.to_s %>th of June, <%= @days_of_week_en[k] %></p>
+			</div>
+			<div id="program1">
+		<% @speakers.each_with_index do |s, j| %>
+		 <% if d == s.speech_day %>
+          <div class="post<%= k + 1 %>" name="people<%= j + 1 %>" >
+				<div class="post_head  <%= s.my_class %>" >
+					<p><%= s.speech_time %></p>
+					
+				</div>
+				<div class="people_inform">
+					<span><%= s.speech_title_en %><br></span><br>
+					<%= image_tag(s.avatar.url(:thumb), :class => "avatar") %>
+					<p class="black_name_text"><%= s.first_name_en %> <%= s.last_name_en %></p><br>
+					<p class="company_position"><%=s.position%></p>
+				</div>
+			</div>
+			<% end %>
+          <% end %>
+        
+    	</div>
+		
+		
+		<% @speakers.each_with_index do |s, i| %>
+		  <% if d == s.speech_day %>
+			<div name="people<%= i + 1 %>" class="blocInform_1 peolpebl<%= k + 1 %>">
+				<div class="Photo1">
+					<%= image_tag s.avatar.url(:medium) %>
+				</div>
+				<div class="informAbout" name="info1"> 
+					<span><%= s.speech_title_en %></span>
+					<p>
+					<%= s.speech_description_en %>
+					</p>
+				</div>
+				<div class="informAbout" name="info2"> 
+					<span><%= s.first_name %> <%= s.last_name %></span>
+					<p>
+					<%= s.speaker_description_en %> 
+					</p>
+				</div>
+				<div class="detailsInformatoin">
+					<span name="info1">Report</span>
+					<div class="clear"></div>
+					<span name="info2">About speaker</span>
+				</div>
+				<div class="clear"></div>
+				<div class="closeBlock">
+					<%= image_tag "batton_closeBlock.png" %> 
+				</div>
+			</div>
+		<% end %>
+		<% end %>
+
+
+		<% if k == 1 %>
+		    <div class="ref">
+		   	   <div class="ref1"></div>
+		   	   <div class="ref2">
+		   	      <%= image_tag "people3.jpg" %>
+		   	   	  <p>
+		   	   	  			    In the context of general depression that gripped the
+				 country through football and geopolitical turmoil, IT workers look very
+				 strange - the world market of IT is growing at a frantic pace and the 
+				only question is who will open his mouth wider and bite a piece of it 
+				more. Lunch with Outsource People in Kharkiv once again proved that 
+				Ukraine still has the talent and everything will be fine ;) .  
+		   	   	  </p>
+		   	   	  <div class="a_ref">Roman Khmil <span>COO @ Ciklum</span></div>	
+		   	   </div>
+		   	   <div class="ref3"></div>
+		   </div>
+		<% end %>
+		<% if k == 5 %>
+		    <div class="poster_afterparty">
+			  <%= image_tag "afterparty.png" %>
+		    </div>
+		<% end %>
+		
+	<% end %>
+	
+		
+		<!--_______________________________________________________________________-->
+		
+	<div class="ps_text_box ps_text_box_1_1">
+
+		<iframe class="video_fr" src="//www.youtube.com/embed/r_MRFtPWSeA" allowfullscreen="" height="281" width="500" frameborder="0"></iframe>
+		   	  <div class="a_ref">Jan Willem Tromp на Outsource People 2013</div>
+		</div>
+				
+
+	<div id="price">
+		    	<div id="to_block2"></div>
+		 <p class="text_pr">Price</p>
+		<center>
+		<table id="pricetable" style="border:1px; font-family:Arial;">
+			<tbody><tr>
+				<td class="toprice">Type</td>
+				<td class="toprice">Personal</td>
+				<td class="toprice">Company</td>
+			</tr>
+					<tr>
+						<td class="commonprice">Standart<br>(without records)</td>
+						<td class="commonprice">$145</td>
+						<td class="commonprice">$195</td>
+					</tr>
+				
+				<tr>
+					<td class="commonprice">Gold<br>(with records)</td>
+					<td class="commonprice">$195</td>
+					<td class="commonprice">$245</td>
+				</tr>
+		</tbody></table>
+		<br>
+		
+		</center>
+		
+		
+			
+	 </div>
+
+	 <div class="ref">
+		   	   <div class="ref1"></div>
+		   	   <div class="ref2">
+		   	      <%= image_tag "qs.png" %>
+		   	   	  <p>
+		   	   	  			  From this point of view, the participation of Qualium 
+Systems in conference “Outsource people 2013″ that has taken place in 
+Kharkiv on Nov 22-23 was important and logical event. <br><br> The true difference is in fact that for the professionals the process of improving of their skills is permanent.
+		   	   	  </p>
+		   	   	  <div class="a_ref">Qualium System <span><a href="http://www.qualium-systems.com/blog/corporate-news/outsource-people-2013-outsourcing-goals-challenges-perspectives/" rel="nofollow">link to source</a></span></div>	
+		   	   </div>
+		   	   <div class="ref3"></div>
+		   </div>
+
+
+
+		
+		
+		
+		
+	<div id="block32">
+      <h2>5 reasons to visit this conference</h2>
+      <table>
+        <tbody><tr>
+          <td class="td_img"><%= image_tag "cause1.jpg" %></td>
+          <td>
+            <p><span class="special">1.  Getting the best ideas in outsourcing business that will bring the result now</span></p>
+            <p>You will receive the most effective tools for the development of your company.</p>
+            <p>And you can immediately implement these tools into practice, making great leap forward in all respects.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p><span class="special">2.  Familiarity with industry professionals and building partnerships in the chat room</span><!--р-->
+            </p><p>At a conference of this level many stars outsourcing 
+				business arriving. Each of them dominated in a variety of niches. One 
+				communication with them bring a positive impact on your progress, plus, 
+				it's possible you will be able to negotiate a favorable partnership with
+				 people in the hall and build a partnership together. </p>
+            <p>It happens all the time on each of our conference. </p>
+          </td>
+          <td class="td_img"><%= image_tag "cause2.jpg" %></td>
+        </tr>
+        <tr>
+          <td class="td_img"><%= image_tag "cause3.jpg" %></td>
+          <td>
+            <p><span class="special">3.  Informal communication during a delicious lunch and coffee breaks</span></p>
+			            <p>One thing - listen to professionals during presentations 
+			or read about them on the news sites. Another thing - stay with them at 
+			arm's length and to obtain from them the latest information during the 
+			conference.</p>
+            <p>Moreover, you will be able to talk personally with each 
+				of the speakers individually, ask questions and get specific 
+				instructions.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p><span class="special">4. Note: World Pie of IT market is growing annually by 30-40%, and this is directly depends on your knowledge and effort</span></p>
+            <p>Even just staying in the same place, most likely you will
+				 grow. Imagine how many new ideas you can implement to expand your own 
+				business, armed with the information and energy from the conference.</p>
+            <p>Imagine what results you can achieve during the year. The
+			 conference is held at the end of the year specifically that you will be
+			 able to apply next year as much information!</p>
+          </td>
+          <td class="td_img"><%= image_tag "cause4.jpg" %></td>
+        </tr>
+        <tr>
+          <td class="td_img"><%= image_tag "cause5.jpg" %></td>
+          <td>
+            <p><span class="special">5.  Invest in yourself and your employees</span></p>
+            <p>It is often difficult to find time between hundreds of routine affairs. <br>
+				 You will choose a special time that unseparated dedicate perhaps most 
+				important hours for your further development. All information in one 
+				place and will be given in a compressed period.</p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+
+    	<div class="ps_text_box ps_text_box_1_1">
+
+			<iframe class="video_fr" src="//www.youtube.com/embed/R_-d1yewE2U" allowfullscreen="" height="281" width="500" frameborder="0"></iframe>
+		Eduard Rubin CEO @ Telesens on Outsource People 2013
+		
+		
+		
+		</div>
+		
+		
+	<div id="contacts">
+
+			    		
+	
+					<div class="ps_text_box ps_text_box_1_1">
+						
+						
+<iframe class="video_fr" src="//www.youtube.com/embed/VJTSPddWXHI" allowfullscreen="" height="281" width="500" frameborder="0"></iframe>
+					Lilia Vershinina about Outsource People 2013
+					</div>			
+
+		<p class="text_pr">Partners</p>
+		<center style="font-size:20px;font-family:Arial">On the way...</center>
+			 <br>
+			<br>
+		
+		
+			<div class="ps_text_box ps_text_box_1_1">
+<iframe class="video_fr" src="//www.youtube.com/embed/SIduVzcOybA" allowfullscreen="" height="281" width="500" frameborder="0"></iframe>
+
+			Kateryna Minina about Outsource People 2013
+			</div>
+		
+<div id="contacts">
+
+		    	<div id="to_block4"></div>
+	
+	<p class="text_pr">Contacts</p>
+	<center style="font-size:20px;font-family:Arial">info@brightoutsource.com<br> skype: azaless<br>+3 8 063 702 3 703</center>
+		 <br>
+		<br>
+	</div>
+	
+	
+	
+
+	
+
+	</div>	
+   
+	</div>	
+	
