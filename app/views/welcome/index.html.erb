@@ -200,7 +200,7 @@ business world.
 		
 		<% @speakers.each_with_index do |s, i| %>
 		  <% if d == s.speech_day %>
-			<div name="people<%= s.speech_day.wday + 1 %>" class="blocInform_1 peolpebl<%= k + 1 %>">
+			<div name="people<%= i + 1 %>" class="blocInform_1 peolpebl<%= s.speech_day.wday + 1 %>">
 				<div class="Photo1">
 					<%= image_tag s.avatar.url(:medium) %>
 				</div>
