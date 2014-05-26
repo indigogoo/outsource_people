@@ -1,11 +1,11 @@
 <%= simple_form_for [:admin, @speaker] do |f| %>
     <table>
       <tr>
-        <td class="speaker_form"><%= f.input :first_name %></td>
+        <td class="speaker_form"><%= f.input :first_name, label: 'Имя' %></td>
         <td class="speaker_form"><%= f.input :first_name_en %></td>
       </tr>
       <tr>
-        <td class="speaker_form"><%= f.input :last_name %></td>
+        <td class="speaker_form"><%= f.input :last_name, label: 'Фамилия' %></td>
         <td class="speaker_form"><%= f.input :last_name_en %></td>
       </tr>
     </table>
@@ -13,15 +13,15 @@
     <%= f.input :position %>
     <table>
       <tr>
-        <td class="speaker_form"><%= f.input :speaker_description %></td>
+        <td class="speaker_form"><%= f.input :speaker_description, label: 'Описание докладчика' %></td>
         <td class="speaker_form"><%= f.input :speaker_description_en %></td>
       </tr>
       <tr>
-        <td class="speaker_form"><%= f.input :speech_title %></td>
+        <td class="speaker_form"><%= f.input :speech_title, label: 'Название доклада' %></td>
         <td class="speaker_form"><%= f.input :speech_title_en %></td>
       </tr>
       <tr>
-        <td class="speaker_form"><%= f.input :speech_description %></td>
+        <td class="speaker_form"><%= f.input :speech_description, label: 'Описание доклада' %></td>
         <td class="speaker_form"><%= f.input :speech_description_en %></td>
       </tr>
     </table>

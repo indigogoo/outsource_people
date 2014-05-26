@@ -10,7 +10,7 @@ class Speaker < ActiveRecord::Base
     validates :status, presence: true
 
 
-    before_save :check_status_valid
+    before_save :check_status_valid, :check_speakers_count
     Status_arr = ["International Speakers", 
     	          "Sales and Marketing", 
     	          "Speeches for CEO's", 
@@ -26,7 +26,13 @@ class Speaker < ActiveRecord::Base
     end
 
     def check_speakers_count
-        return false unless Speaker.where(speech_time: :self.speech_time).count < 4
+        if self.speech_day.wday > 0 && self.speech_day.wday < 6
+            self.errors.add(:base, :max_4)
+            return false if Speaker.where(speech_day: self.speech_day).count > 3
+        else
+            self.errors.add(:base, :max_6) 
+            return false if Speaker.where(speech_day: self.speech_day).count > 5
+        end
     end
     
 	def my_class

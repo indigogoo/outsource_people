@@ -438,18 +438,18 @@ border-radius: 1px;
 
 
 /*Стили редактирования колонок*/
-.post1, .post2, .post3, .post4, .post5{
+.post6, .post2, .post3, .post4, .post5{
 	width:252px;
 	height:295px;
 	float:left;
 	border:1px solid #bdbdbd;
 	cursor: pointer;
 }
-.post1.active, .post2.active, .post3.active, .post4.active, .post5.active{
+.post6.active, .post2.active, .post3.active, .post4.active, .post5.active{
 	border-bottom: none;
 }
 
-.post6, .post7{
+.post1, .post7{
 	width:167.333px;
 	height:295px;
 	float:left;
@@ -457,7 +457,7 @@ border-radius: 1px;
 	cursor: pointer;
 }
 
-.post6.active, .post7.active, {
+.post1.active, .post7.active, {
 	border-bottom: none;
 }
 
@@ -723,7 +723,7 @@ border-radius: 1px;
 	min-height: 20px;
 }
 
-.post1 .international-speaker:after, .post2 .international-speaker:after, .post3 .international-speaker:after, .post4 .international-speaker:after, .post5 .international-speaker:after {
+.post6 .international-speaker:after, .post2 .international-speaker:after, .post3 .international-speaker:after, .post4 .international-speaker:after, .post5 .international-speaker:after {
     content: image-url("images001_1.png");
 }
 
@@ -731,7 +731,7 @@ border-radius: 1px;
 	background-color: #ee6540;
 }
 
-.post1 .sales-speaker:after, .post2 .sales-speaker:after, .post3 .sales-speaker:after, .post4 .sales-speaker:after, .post5 .sales-speaker:after {
+.post6 .sales-speaker:after, .post2 .sales-speaker:after, .post3 .sales-speaker:after, .post4 .sales-speaker:after, .post5 .sales-speaker:after {
     content: image-url("images001_2.png");
 }
 
@@ -740,7 +740,7 @@ border-radius: 1px;
 	min-height: 20px;
 }
 
-.post1 .ceo-speaker:after, .post2 .ceo-speaker:after, .post3 .ceo-speaker:after, .post4 .ceo-speaker:after, .post5 .ceo-speaker:after {
+.post6 .ceo-speaker:after, .post2 .ceo-speaker:after, .post3 .ceo-speaker:after, .post4 .ceo-speaker:after, .post5 .ceo-speaker:after {
     content: url('/assets/images001_3.png');
 }
 
@@ -749,7 +749,7 @@ border-radius: 1px;
 	min-height: 20px;
 }
 
-.post1 .pm-speaker:after, .post2 .pm-speaker:after, .post3 .pm-speaker:after, .post4 .pm-speaker:after, .post5 .pm-speaker:after {
+.post6 .pm-speaker:after, .post2 .pm-speaker:after, .post3 .pm-speaker:after, .post4 .pm-speaker:after, .post5 .pm-speaker:after {
     content: image-url("images001_4.png");
 }
 .post_head:after {

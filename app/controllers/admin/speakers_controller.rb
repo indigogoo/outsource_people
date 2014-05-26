@@ -1,7 +1,7 @@
 class Admin::SpeakersController < Admin::ApplicationController
   def index
     @speakers = Speaker.all.order(:speech_day, :speech_time)
-      
+    @days = Speaker.all.order(:speech_day, :speech_time).collect(&:speech_day).uniq
 
   end
 
@@ -14,6 +14,8 @@ class Admin::SpeakersController < Admin::ApplicationController
     if @speaker.save
       redirect_to admin_speakers_path
     else
+      binding.pry
+      flash.now[:error] = @speaker.errors.full_messages.join('<br>')
       render :action => 'new'
     end
   end

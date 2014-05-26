@@ -24,7 +24,7 @@
 	   	<%= image_tag("image_1.png", :class => "first") %>
 			<div class="poster_text_top">
 				<%= image_tag "image_2.png" %>
-				<span>С 9.06.2014 по 16.06.2014</span><br>
+				<span>С <%= @speakers.first.speech_day.strftime('%e.%m.%Y') %> по <%= @speakers.last.speech_day.strftime('%e.%m.%Y') %></span><br>
 			</div>
 			<div class="poster_text_bott"> 
 				<p><span class="pervaya_yellow"><b>Первая</b></span> онлайн-конференция по бизнесу</p><br>
@@ -39,7 +39,7 @@
 					<%= image_tag "images001.png" %>
 				</div>
 				<div id="people">
-					<% @speakers.where(top: true).limit(4).each_with_index do |s| %>
+					<% @speakers.where(top: true).limit(4).each do |s| %>
 					  <% if s == 0 %>
 					  	<div class="people" style="margin-left:0">
 					  <% else %>
@@ -175,12 +175,12 @@ business world.
 
 	        <div class="program_date">
 			    <%= image_tag "image_3.png" %>
-				<p><%= d.day.to_s %> июня, <%= @days_of_week[k] %></p>
+				<p><%= localize d, :format => '%e %B, %A' %></p>
 			</div>
 			<div id="program1">
 		<% @speakers.each_with_index do |s, j| %>
 		 <% if d == s.speech_day %>
-          <div class="post<%= k + 1 %>" name="people<%= j + 1 %>" >
+          <div class="post<%= s.speech_day.wday + 1 %>" name="people<%= j + 1 %>" >
 				<div class="post_head  <%= s.my_class %>" >
 					<p><%= s.speech_time %></p>
 					
@@ -200,7 +200,7 @@ business world.
 		
 		<% @speakers.each_with_index do |s, i| %>
 		  <% if d == s.speech_day %>
-			<div name="people<%= i + 1 %>" class="blocInform_1 peolpebl<%= k + 1 %>">
+			<div name="people<%= s.speech_day.wday + 1 %>" class="blocInform_1 peolpebl<%= k + 1 %>">
 				<div class="Photo1">
 					<%= image_tag s.avatar.url(:medium) %>
 				</div>
