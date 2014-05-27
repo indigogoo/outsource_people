@@ -1,4 +1,4 @@
-#require 'rvm/capistrano' # Для работы rvm
+require 'rvm/capistrano' # Для работы rvm
 require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика. 
 
 set :application, "outsource-people"
