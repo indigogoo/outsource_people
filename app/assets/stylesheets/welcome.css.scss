@@ -372,12 +372,25 @@ border-radius: 1px;
 }
 
 #sponsors img{
-	margin-top:0px;
-	margin-bottom:10px;
-	height: 80px;
+	margin-top:40px;
+	margin-bottom:50px;
 
 }
 
+/*-------------Партнеры------------*/
+
+.partners{
+	margin:20px auto;
+	width:1024px;
+	/*outline:1px solid #f09366;*/
+}
+
+.partners img{
+	margin-top:0px;
+	margin-bottom:0px;
+	width: 166px;
+
+}
 
 /*-------------Программа-----------*/
 
@@ -914,3 +927,7 @@ p {margin: 0}
 	color:#a0a0a0;
 	font-size:14px;
 	}
+#ps_content td{
+	padding:10px;
+	border: 2px solid white;
+}

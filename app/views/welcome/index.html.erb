@@ -4,11 +4,11 @@
 				<a href="#"><%= image_tag "outsorsing_people.png" %></a>
 			</div>
 			<ul class="mainMenu">
-				<li ><span rel="#to_block1" class="program">Программа</span></li>
-				<li ><span rel="#to_block2" class="price">Цены</span></li>
-				<li ><span rel="#to_block3" class="registr"><b>Регистрация</b></span></li>
-				<li ><span rel="#to_block4" class="contacts">Контакты</span></li>
-				<li ><span rel="#to_block5" class="call">Заказ звонка</span></li>
+				<li><span rel="#to_block1" class="program">Программа</span></li>
+				<li><span rel="#to_block2" class="price">Цена</span></li>
+				<li><span rel="#to_block3" class="registr"><b>Регистрация</b></span></li>
+				<li><span rel="#to_block4" class="contacts">Контакты</span></li>
+				<li><span rel="#to_block5" class="call">Партнеры</span></li>
 			</ul>
 		
 			<div class="telephone">
@@ -139,7 +139,75 @@
 				<div id="timer">
 					<h2>До завершения регистрации: </h2>
 					<br><br>
-					<script type="text/javascript" src="http://timegenerator.ru/s/b0438343e8c099b1617713a03cbed157.js"></script>
+					<!--[if lte IE 8]>
+<link rel="stylesheet" href="http://timegenerator.ru/css/style4ie.css">
+<![endif]-->
+<!--[if gte IE 9]>
+<link rel="stylesheet" href="http://timegenerator.ru/css/style4ieM.css">
+<![endif]-->
+<script type="text/javascript">
+	year = 2014; month = 6; day = 3; hour= 1; minute= 0; sec= 0;
+	function CountBox() {
+		dateNow = new Date;
+		amount = dateFuture.getTime() - dateNow.getTime() + 5;
+		delete dateNow;
+		if (amount < 0) {
+			out = "<div class='countbox-num'><div id='countbox-days1'><span></span>0</div><div id='countbox-days2'><span></span>0</div><div id='countbox-days-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-hours1'><span></span>0</div><div id='countbox-hours2'><span></span>0</div><div id='countbox-hours-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-mins1'><span></span>0</div><div id='countbox-mins2'><span></span>0</div><div id='countbox-mins-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-secs1'><span></span>0</div><div id='countbox-secs2'><span></span>0</div><div id='countbox-secs-text'></div></div>";
+			document.getElementById("countbox").innerHTML = out
+		} else {
+			days = 0;
+			days1 = 0;
+			days2 = 0;
+			hours = 0;
+			hours1 = 0;
+			hours2 = 0;
+			mins = 0;
+			mins1 = 0;
+			mins2 = 0;
+			secs = 0;
+			secs1 = 0;
+			secs2 = 0;
+			out = "";
+			amount = Math.floor(amount / 1e3);
+			days = Math.floor(amount / 86400);
+			days1 = (days >= 10) ? days.toString().charAt(0) : '0';
+			days2 = (days >= 10) ? days.toString().charAt(1) : days.toString().charAt(0);
+			amount = amount % 86400;
+			hours = Math.floor(amount / 3600);
+			hours1 = (hours >= 10) ? hours.toString().charAt(0) : '0';
+			hours2 = (hours >= 10) ? hours.toString().charAt(1) : hours.toString().charAt(0);
+			amount = amount % 3600;
+			mins = Math.floor(amount / 60);
+			mins1 = (mins >= 10) ? mins.toString().charAt(0) : '0';
+			mins2 = (mins >= 10) ? mins.toString().charAt(1) : mins.toString().charAt(0);
+			amount = amount % 60;
+			secs = Math.floor(amount);
+			secs1 = (secs >= 10) ? secs.toString().charAt(0) : '0';
+			secs2 = (secs >= 10) ? secs.toString().charAt(1) : secs.toString().charAt(0);
+			out = "<div class='countbox-num'><div id='countbox-days1'><span></span>" + days1 + "</div><div id='countbox-days2'><span></span>" + days2 + "</div><div id='countbox-days-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-hours1'><span></span>" + hours1 + "</div><div id='countbox-hours2'><span></span>" + hours2 + "</div><div id='countbox-hours-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-mins1'><span></span>" + mins1 + "</div><div id='countbox-mins2'><span></span>" + mins2 + "</div><div id='countbox-mins-text'></div></div>" +
+			"<div class='countbox-space'></div>" +
+			"<div class='countbox-num'><div id='countbox-secs1'><span></span>" + secs1 + "</div><div id='countbox-secs2'><span></span>" + secs2 + "</div><div id='countbox-secs-text'></div></div>";
+			document.getElementById("countbox").innerHTML = out;
+			setTimeout("CountBox()", 1e3)
+		}
+	}
+	month = --month;
+	dateFuture = new Date(year, month, day, hour, minute, sec);
+	window.onload = function () {
+		CountBox()
+	}
+</script>
+<div id="countbox"><div class="countbox-num"><div id="countbox-days1"><span></span>0</div><div id="countbox-days2"><span></span>5</div><div id="countbox-days-text"></div></div><div class="countbox-space"></div><div class="countbox-num"><div id="countbox-hours1"><span></span>1</div><div id="countbox-hours2"><span></span>2</div><div id="countbox-hours-text"></div></div><div class="countbox-space"></div><div class="countbox-num"><div id="countbox-mins1"><span></span>3</div><div id="countbox-mins2"><span></span>3</div><div id="countbox-mins-text"></div></div><div class="countbox-space"></div><div class="countbox-num"><div id="countbox-secs1"><span></span>1</div><div id="countbox-secs2"><span></span>7</div><div id="countbox-secs-text"></div></div></div>
 				</div>
 			</div>
 	   </div>
@@ -176,9 +244,7 @@
 	</div>
 	
 	<div id="sponsors">
-	   <% @banners.each do |b| %>
-	     <%=link_to( image_tag(b.banner_image.url(:medium)), b.url, :class=>"grayscale") %>
-	   <% end %>
+	   <%= image_tag "sponsors.png" %>
    </div>
    
 
@@ -327,24 +393,100 @@ business world.
 		    	<div id="to_block2"></div>
 		 <p class="text_pr">Цена</p>
 		<center>
-		<table id="pricetable" style="border:1px; font-family:Arial;">
-			<tbody><tr>
-				<td class="toprice">Пакет</td>
-				<td class="toprice">Лицам</td>
-				<td class="toprice">Компаниям</td>
-			</tr>
-					<tr>
-						<td class="commonprice">Standart<br>(без записи)</td>
-						<td class="commonprice">$145</td>
-						<td class="commonprice">$195</td>
-					</tr>
+			
+			
+					<table id="ps_content">
+					  <tbody>
+					    <tr>
+					      <td>&nbsp;</td>
+					      <td style="text-align: center;">Standart</td>
+					      <td style="text-align: center;">Gold</td>
+					      <td style="text-align: center;">Company</td>
+					    </tr>
+					    <tr>
+					      <td>Участие в online конференции</td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					    </tr>
+
+					    <tr>
+					      <td>36 докладов спикеров - лидеров отрасли<br>
+					</td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					    </tr>
+					    <tr>
+					      <td>Все презентации с контактами спикеров<br>
+					</td>
+					      <td style="text-align: center;">&nbsp;</td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					    </tr>
+						<tr><td>Запись конференции в формате видео<br>
+					</td>
+					      <td style="text-align: center;">&nbsp;</td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					    </tr>
+					    <tr>
+					    
 				
-				<tr>
-					<td class="commonprice">Gold<br>(с записью)</td>
-					<td class="commonprice">$195</td>
-					<td class="commonprice">$245</td>
-				</tr>
-		</tbody></table>
+						  </tr><tr>
+							<td>
+						      Адуиозапись курса повышения прибыльности Аутсорсинг компании
+						</td>
+						      <td style="text-align: center;">
+						      </td>
+						      <td style="text-align: center;"><%= image_tag("galochka.png", height: "24", width: "24") %></td>
+						      <td style="text-align: center;"><%= image_tag("galochka.png", height: "24", width: "24") %></td>
+						    </tr>
+					    <tr>
+					    
+					    </tr><tr>
+							   <td>Оплата по безналичному расчету<br>
+							      </td>
+							      <td style="text-align: center;">&nbsp;</td>
+							      <td style="text-align: center;">&nbsp;</td>
+							      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+							    </tr>
+								<tr><td>Приоритет вопросов докладчикам<br>
+							      </td>
+							      <td style="text-align: center;">&nbsp;</td>
+							      <td style="text-align: center;">&nbsp;</td>
+							      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+							    </tr>	
+					    <tr><td>Неограниченное количество участников от компании<br>
+					      </td>
+					      <td style="text-align: center;">&nbsp;</td>
+					      <td style="text-align: center;">&nbsp;</td>
+					      <td style="text-align: center;">&nbsp;<%= image_tag("galochka.png", height: "24", width: "24") %></td>
+					    </tr>
+
+					    
+					    <tr>
+					      <td><br>
+					      </td>
+					      <td style="text-align: center;"><br>
+					      </td>
+					      <td style="text-align: center;"><br>
+					      </td>
+					      <td style="text-align: center;"><br>
+					      </td>
+					    </tr>
+
+					      <tr><td bgcolor="#FFEC94">Стоимость<br>
+					      </td>
+					      <td style="text-align: center;" bgcolor="#FFEC94">$145</td>
+					      <td style="text-align: center;" bgcolor="#FFEC94">$195</td>
+					      <td style="text-align: center;" bgcolor="#FFEC94">$245</td>
+					    </tr>
+
+					  </tbody>
+					</table>
+					
+	
 		<br>
 		
 		</center>
@@ -430,7 +572,7 @@ Kharkiv on Nov 22-23 was important and logical event. <br><br> The true differen
 		
 	<div id="contacts">
 
-			    	<div id="to_block5">
+			    	<div id="">
 			    		
 							<div id="block32">
 						      <h2>FAQ</h2>
@@ -455,9 +597,12 @@ Kharkiv on Nov 22-23 was important and logical event. <br><br> The true differen
 <iframe class="video_fr" src="//www.youtube.com/embed/VJTSPddWXHI" allowfullscreen="" height="281" width="500" frameborder="0"></iframe>
 					Лилия  Вершинина об Outsource People 2013
 					</div>			
-
+		<div id="to_block5" class="partners">
 		<p class="text_pr">Партнеры</p>
-		<center style="font-size:20px;font-family:Arial">В процессе...</center>
+		   <% @banners.each do |b| %>
+		     <%=link_to( image_tag(b.banner_image.url(:medium)), b.url, :class=>"grayscale") %>
+		   <% end %>
+        </div>
 			 <br>
 			<br>
 		</div>
