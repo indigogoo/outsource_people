@@ -12,6 +12,7 @@
  
 
  <% @days.each do |d| %> 
+    <td></br><strong><%= localize d, :format => '%e %B, %A' %></strong></td>
     <% @speakers.each do |speaker| %>
       <% if d == speaker.speech_day %>
         <tr>
@@ -32,7 +33,7 @@
           
       <% end %>
     <% end %>
-    <td><p>-----</p></td>
+    
   <% end %>
 
 

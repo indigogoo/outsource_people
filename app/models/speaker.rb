@@ -10,7 +10,8 @@ class Speaker < ActiveRecord::Base
     validates :status, presence: true
 
 
-    before_save :check_status_valid, :check_speakers_count
+    before_save :check_status_valid
+    before_create :check_speakers_count
     Status_arr = ["International Speakers", 
     	          "Sales and Marketing", 
     	          "Speeches for CEO's", 

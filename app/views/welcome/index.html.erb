@@ -36,7 +36,65 @@
 	   <div id="inform">
 			<div id="inform_left">
 				<div id="information">
-					<%= image_tag "images001.png" %>
+					<div id="information_img">
+						<!--<img  src="images/images001.png">-->
+                        <ul>
+                        	<li>
+                            	<div class="table_td changeTableTD">
+                                    <%= image_tag("man.png", alt: "картинка") %>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("sale.png", alt: "картинка") %>
+                            	</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td changeTableTD">                         
+                                    <%= image_tag("greenMan.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">	                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">	                            
+                                    <%= image_tag("people.png", alt: "картинка") %>
+								</div>
+                            </li>
+                        </ul>
+                        <ul id="textForImg">
+                        	<li>
+                            	<p>Международные</p>
+                                <p>докладчики</p>
+                            </li>
+                            <li>
+                            	<p>Продажи и</p>
+                                <p>маркетинг</p>
+                            </li>
+                            <li>
+                            	<p>Доклады для</p>
+                            	<p>CEO</p>
+                                
+                            </li>
+                            <li>
+                            	<p>PM, юристы,</p>
+                                <p>HR</p>
+                            </li>
+                        </ul>
+					</div>
 				</div>
 				<div id="people">
 					<% @speakers.where(top: true).limit(4).each do |s| %>

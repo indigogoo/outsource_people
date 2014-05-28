@@ -24,7 +24,7 @@
 	   	<%= image_tag("image_1.png", :class => "first") %>
 			<div class="poster_text_top">
 				<%= image_tag "image_2.png" %>
-				<span>From 9.06.2014 to 16.06.2014</span><br>
+				<span>From <%= @speakers.first.speech_day.strftime('%e.%m.%Y') %> to <%= @speakers.last.speech_day.strftime('%e.%m.%Y') %></span><br>
 			</div>
 			<div class="poster_text_bott"> 
 				<p><span class="pervaya_yellow"><b>First</b></span> online conference</p><br>
@@ -36,7 +36,64 @@
 	   <div id="inform">
 			<div id="inform_left">
 				<div id="information">
-					<%= image_tag "images001.png" %>
+					<div id="information_img">
+						<!--<img  src="images/images001.png">-->
+                        <ul>
+                        	<li>
+                            	<div class="table_td changeTableTD">
+                                    <%= image_tag("man.png", alt: "картинка") %>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("sale.png", alt: "картинка") %>
+                            	</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td changeTableTD">                         
+                                    <%= image_tag("greenMan.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">	                            
+                            		<%= image_tag("points.png", alt: "картинка") %>
+								</div>
+                            </li>
+                            <li>
+                            	<div class="table_td">	                            
+                                    <%= image_tag("people.png", alt: "картинка") %>
+								</div>
+                            </li>
+                        </ul>
+                        <ul id="textForImg">
+                        	<li>
+                            	<p>International</p>
+                                <p>Speakers</p>
+                            </li>
+                            <li>
+                            	<p>Sales and</p>
+                                <p>marketing</p>
+                            </li>
+                            <li>
+                            	<p>CEOs talks</p>
+                                
+                            </li>
+                            <li>
+                            	<p>PM, LAW,</p>
+                                <p>HR</p>
+                            </li>
+                        </ul>
+					</div>
 				</div>
 				<div id="people">
 					<% @speakers.where(top: true).limit(4).each_with_index do |s| %>
@@ -44,10 +101,10 @@
 					  	<div class="people" style="margin-left:0">
 					  <% else %>
 					    <div class="people">
-					  <% end %>
+					<% end %>
 					      <%= image_tag("flag_ua.jpg", :class => "flag") %>
 						  <%= image_tag(s.avatar.url(:thumb), :class => "avatar") %>
-						  <p align="center"><%= s.first_name %> <%= s.last_name %> <br>
+						  <p align="center"><%= s.first_name_en %> <%= s.last_name_en %> <br>
 						   <%=s.position%> &#64 <%=s.company%></p>
 					    </div>
 
@@ -62,20 +119,20 @@
 				<div id="companies">
 					
 					<div class="companies">
-						<p class="black">дней</p>
+						<p class="black">days</p>
 					    <p class="blue">7</p>
 					</div>
 					<div class="companies">
-						<p class="black">компаний</p>
+						<p class="black">companies</p>
 					    <p class="blue">200</p>
 					</div>
 					<div class="companies">
-						<p class="black">докладa</p>
+						<p class="black">reports</p>
 					    <p class="blue">32</p>
 					</div>
 				</div>
 				<div id="timer">
-					<h2>До завершения регистрации: </h2>
+					<h2>Registration will finish in: </h2>
 					<br><br>
 					<script type="text/javascript" src="http://timegenerator.ru/s/b0438343e8c099b1617713a03cbed157.js"></script>
 				</div>
@@ -114,7 +171,9 @@
 	</div>
 	
 	<div id="sponsors">   
-	   <%= image_tag "sponsors.png" %>
+	   <% @banners.each do |b| %>
+	     <%=link_to( image_tag(b.banner_image.url(:medium)), b.url, :class=>"grayscale") %>
+	   <% end %>
    </div>
    
 
@@ -185,12 +244,12 @@ business world.
 
 	        <div class="program_date">
 			    <%= image_tag "image_3.png" %>
-				<p><%= d.day.to_s %>th of June, <%= @days_of_week_en[k] %></p>
+				<p><%= d.strftime('%eth of %B, %A') %></p>
 			</div>
 			<div id="program1">
 		<% @speakers.each_with_index do |s, j| %>
 		 <% if d == s.speech_day %>
-          <div class="post<%= k + 1 %>" name="people<%= j + 1 %>" >
+          <div class="post<%= s.speech_day.wday + 1 %>" name="people<%= j + 1 %>" >
 				<div class="post_head  <%= s.my_class %>" >
 					<p><%= s.speech_time %></p>
 					
@@ -210,7 +269,7 @@ business world.
 		
 		<% @speakers.each_with_index do |s, i| %>
 		  <% if d == s.speech_day %>
-			<div name="people<%= i + 1 %>" class="blocInform_1 peolpebl<%= k + 1 %>">
+			<div name="people<%= i + 1 %>" class="blocInform_1 peolpebl<%= s.speech_day.wday + 1 %>">
 				<div class="Photo1">
 					<%= image_tag s.avatar.url(:medium) %>
 				</div>
