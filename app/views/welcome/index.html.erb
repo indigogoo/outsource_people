@@ -24,7 +24,11 @@
 	   	<%= image_tag("image_1.png", :class => "first") %>
 			<div class="poster_text_top">
 				<%= image_tag "image_2.png" %>
+				<% if @speakers.first.nil? %>
+				<span> Еще не создано ни одного спикера </span><br>
+				<% else %>
 				<span>С <%= @speakers.first.speech_day.strftime('%e.%m.%Y') %> по <%= @speakers.last.speech_day.strftime('%e.%m.%Y') %></span><br>
+				<% end %>
 			</div>
 			<div class="poster_text_bott"> 
 				<p><span class="pervaya_yellow"><b>Первая</b></span> онлайн-конференция по бизнесу</p><br>

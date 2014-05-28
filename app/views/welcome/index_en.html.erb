@@ -24,7 +24,11 @@
 	   	<%= image_tag("image_1.png", :class => "first") %>
 			<div class="poster_text_top">
 				<%= image_tag "image_2.png" %>
-				<span>From <%= @speakers.first.speech_day.strftime('%e.%m.%Y') %> to <%= @speakers.last.speech_day.strftime('%e.%m.%Y') %></span><br>
+				<% if @speakers.first.nil? %>
+				<span> Didn't create speakers </span><br>
+				<% else %>
+				<span>С <%= @speakers.first.speech_day.strftime('%e.%m.%Y') %> по <%= @speakers.last.speech_day.strftime('%e.%m.%Y') %></span><br>
+				<% end %>
 			</div>
 			<div class="poster_text_bott"> 
 				<p><span class="pervaya_yellow"><b>First</b></span> online conference</p><br>
