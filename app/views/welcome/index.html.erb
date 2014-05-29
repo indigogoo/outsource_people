@@ -110,7 +110,7 @@
 					      <%= image_tag("flag_ua.jpg", :class => "flag") %>
 						  <%= image_tag(s.avatar.url(:thumb), :class => "avatar") %>
 						  <p align="center"><%= s.first_name %> <%= s.last_name %> <br>
-						   <%=s.position%> &#64 <%=s.company%></p>
+						   <%=s.position%> <%=s.company%></p>
 					    </div>
 
 					  
@@ -317,7 +317,7 @@ business world.
 					<span><%= s.speech_title %><br></span><br>
 					<%= image_tag(s.avatar.url(:thumb), :class => "avatar") %>
 					<p class="black_name_text"><%= s.first_name %> <%= s.last_name %></p><br>
-					<p class="company_position"><%=s.position%></p>
+					<p class="company_position"><%=s.position%> <%=s.company%></p>
 				</div>
 			</div>
 			<% end %>

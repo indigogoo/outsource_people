@@ -1,9 +1,9 @@
 class Speaker < ActiveRecord::Base
 
-    has_attached_file :avatar, :styles => { :medium => "174x174>", :thumb => "78x78>" }, :default_url => "/images/:style/missing.png"
+    has_attached_file :avatar, :styles => { :medium => "174x174>", :thumb => "78x78>" }, :default_url => "pr.png"
     validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
-    validates :first_name, :last_name, :first_name_en, :last_name_en, :company, :position, 
+    validates :first_name, :last_name, :first_name_en, :last_name_en, 
               :speaker_description, :speech_title, :speech_description, 
               :speaker_description_en, :speech_title_en, :speech_description_en, 
               :speech_day, :speech_time, presence: true
