@@ -34,11 +34,11 @@ $(document).ready(function(){
         errors = $.parseJSON(xhr.responseText);
       } catch(err) {
         // If the responseText is not valid JSON (like if a 500 exception was thrown), populate errors with a generic error message.
-        errors = {message: "Please reload the page and try again"};
+        errors = {message: "Перезагрузите страницу и попытайтесь снова."};
       }
  
       // Build an unordered list from the list of errors
-      errorText = "There were errors with the submission. Please reload the page and try again.";
+      errorText = "Произошла ошибка. Перезагрузите страницу и попытайтесь снова.";
       errorList = "<ul>"
       for ( error in errors ) {
         errorList += "<li>" + error + ': ' + errors[error] + "</li> ";

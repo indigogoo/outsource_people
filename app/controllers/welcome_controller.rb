@@ -18,7 +18,7 @@ class WelcomeController < ApplicationController
     name  = params[:name]
     phone = params[:phone]
          
-    if email.present?
+    if email.present? && name.present? && phone.present?
        
       begin
         @mc.lists.subscribe(@list_id, {'email' => email}, :merge_vars => {:FNAME => name, :FNAME => phone, :LNAME => ''}, :double_optin => false, :update_existing => true, :replace_interests => false, :send_welcome => false)
@@ -30,13 +30,13 @@ class WelcomeController < ApplicationController
         rescue Mailchimp::ListAlreadySubscribedError
            
           respond_to do |format|
-            format.json{render :json => {:message => "#{email} is already subscribed to the list"}}
+            format.json{render :json => {:message => "#{email} уже зарегистрирован"}}
           end
          
         rescue Mailchimp::ListDoesNotExistError
           
           respond_to do |format| 
-            format.json{render :json => {:message => "The list could not be found."}}
+            format.json{render :json => {:message => "Список подписчиков не найден."}}
           end
          
         rescue Mailchimp::Error => ex
@@ -44,7 +44,7 @@ class WelcomeController < ApplicationController
             if ex.message
         
               respond_to do |format|       
-                format.json{render :json => {:message => "There is an error. Please enter valid email id."}}
+                format.json{render :json => {:message => "Ошибка. Введите корректный Email."}}
               end
              
             else
@@ -59,7 +59,7 @@ class WelcomeController < ApplicationController
         else
            
           respond_to do |format|       
-            format.json{render :json => {:message => "Email Address Cannot be blank. Please enter valid email id."}}
+            format.json{render :json => {:message => "Поля не могут быть пустыми. Введите корректные значения."}}
           end
          
         end

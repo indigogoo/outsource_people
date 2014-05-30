@@ -233,9 +233,9 @@
 				<%= image_tag "img_form_registr.png" %>
 				
                <%= form_tag('welcome/subscribe', method: "post", id: "mcsubscribe", remote: "true", class: "forma") do -%>
-                 <%= text_field(:merge_vars, :name, type: "text", size: "30", name: "name", maxlength: "20", placeholder: "Имя", class: "input_name") %>
+                 <%= text_field(:merge_vars, :name, type: "name", size: "30", name: "name", maxlength: "20", placeholder: "Имя", class: "input_name") %>
   				 <%= email_field(:email, :address, {id: "email", placeholder: "Email", name: "email", class: "input_email"}) %>
-  				 <%= text_field(:merge_vars, :phone, type: "text", size: "30", name: "phone", maxlength: "20", placeholder: "Телефон", class: "input_phone") %>
+  				 <%= text_field(:merge_vars, :phone, type: "phone", size: "30", name: "phone", maxlength: "20", placeholder: "Телефон", class: "input_phone") %>
   				 <%= submit_tag("Зарегистрироваться", class: "submit") %>
 				<% end %>
 				<div id="response"></div>
