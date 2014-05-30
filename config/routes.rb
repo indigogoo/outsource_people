@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   get 'en' => 'welcome#index_en'
 
+  post 'welcome/subscribe' => 'welcome#subscribe'
+
   # admin area
   
   namespace :admin do

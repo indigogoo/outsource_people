@@ -21,6 +21,8 @@ gem 'pry'
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'pry-remote'
+
+gem "mailchimp-api", "~> 2.0.4"
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 group :production do
