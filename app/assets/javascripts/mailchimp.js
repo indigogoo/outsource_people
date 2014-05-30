@@ -15,7 +15,9 @@ $(document).ready(function(){
        var $divResponse = $('div#response');
  
       // Reset fields and any validation errors, so form can be used again, but leave hidden_field values intact.
+      $form.find('input[type="name"]').val("");
       $form.find('input[type="email"]').val("");
+      $form.find('input[type="phone"]').val("");
       $divResponse.html(data.message);
     })
     .bind('ajax:complete', function(evt, xhr, status){
